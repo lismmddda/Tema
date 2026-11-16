@@ -1,0 +1,183 @@
+/* Estilo global del contenedor del menú */
+.main-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999; /* Asegura que el menú esté por encima del contenido */
+    background-color: #343a40;
+    width: 250px;
+    transform: translateX(0); /* Inicialmente el menú estará abierto */
+    transition: transform 0.3s ease;
+}
+
+/* Menú lateral abierto */
+.main-sidebar.sidebar-open {
+    transform: translateX(0); /* Menú completamente abierto */
+}
+
+/* Menú lateral cerrado (colapsado) */
+.main-sidebar.sidebar-closed {
+    transform: translateX(-250px); /* Menú completamente cerrado */
+}
+
+/* Resto del código CSS sigue igual... */
+
+/* Diseño del contenido de la barra lateral */
+.sidebar {
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 20px;
+}
+
+/* Personalización del menú lateral */
+.nav-pills .nav-link {
+    color: #ffffff;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #4e5d6a;
+}
+
+/* Estilo de los íconos del menú */
+.nav-pills .nav-link i {
+    margin-right: 10px;
+}
+
+/* Menú desplegable */
+.nav-treeview {
+    padding-left: 20px;
+    display: none;
+}
+
+.nav-item.menu-open .nav-treeview {
+    display: block;
+}
+
+/* Estilo para las opciones del menú activo */
+.nav-item.active > .nav-link {
+    background-color: #4e5d6a;
+    color: #ffffff;
+}
+
+/* Estilo para el nombre de usuario en el sidebar */
+.user-panel .info a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.user-panel .info a:hover {
+    color: #f4f4f4;
+}
+
+/* Estilo para los botones en el sidebar */
+.sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #343a40;
+}
+
+.sidebar-footer .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 0;
+    width: 100%;
+}
+
+/* Estilo para el botón de cerrar sesión */
+.sidebar-footer .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #ffffff;
+}
+
+.sidebar-footer .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+/* Estilo para el contenido principal */
+.content-header {
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.content {
+    margin-left: 270px; /* Deja espacio para el menú lateral */
+    padding: 20px;
+}
+
+/* Estilo para el botón de notificaciones */
+.btn.btn-secondary {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn.btn-secondary:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.btn.btn-secondary:focus {
+    outline: none;
+}
+
+/* Estilo para el navbar */
+.main-header .navbar {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* Estilo para el botón de hamburguesa */
+.navbar-nav .nav-item .nav-link {
+    position: absolute; /* Fija la posición del botón fuera del menú lateral */
+    right: 10px; /* Lo coloca al lado derecho de la pantalla */
+    top: 20px; /* Espaciado desde la parte superior */
+    z-index: 1001; /* Asegura que el botón esté por encima del menú lateral */
+    background-color: #000000; /* Fondo negro para visibilidad */
+    border: none;
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para mayor visibilidad */
+}
+
+/* Cambio de color del ícono de hamburguesa cuando el mouse pasa sobre él */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #007bff;
+    background-color: #ffffff; /* Fondo blanco cuando el mouse pasa */
+}
+
+/* Botón de hamburguesa cuando el menú está abierto */
+.navbar-nav .nav-item .nav-link i {
+    color: #ffffff; /* Mantener color blanco en el ícono */
+}
+
+/* Estilo para cuando el botón de hamburguesa está visible y el menú se está abriendo o cerrando */
+.navbar-nav .nav-item .nav-link i {
+    transition: color 0.2s ease;
+}
